@@ -1,0 +1,16 @@
+key == [0,(K)] cadena[0,(t)]
+resultado == 63
+key == [1,(e)] cadena[1,(e)]
+resultado == 0
+key == [2,(y)] cadena[2,(x)]
+resultado == 1
+key == [0,(K)] cadena[3,(t)]
+resultado == 63
+key == [1,(e)] cadena[4,(o)]
+resultado == 10
+(63)
+(0)(1)(63)(10)K
+e
+y
+K
+e

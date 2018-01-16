@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
+#include "DistribucionBP.h"
+
+int main(int argc, char const *argv[])
+{
+	if (strcmp(argv[1],"-h")==0){
+		printf("binomial       = -b k n p \n");
+		printf("poisson        = -p i y\n");
+		printf("tabla binomial = -tb n\n");
+		printf("tabla poisson  = -tp y\n");
+	}
+	else if (strcmp(argv[1],"-b")==0){
+		printf("%f \n",b(atol(argv[2]),atol(argv[3]),atof(argv[4])) );
+	}
+	else if (strcmp(argv[1],"-p")==0){
+		printf("%f \n",p(atol(argv[2]),atof(argv[3])) );
+	}
+	else if (strcmp(argv[1],"-tb")==0){
+		tableBinomial(atol(argv[2]));
+	}
+	else if (strcmp(argv[1],"-tp")==0){
+		tablePoisson(atof(argv[2]));
+	}
+	printf("\n\nEl programa termino normalmente .......\n");
+
+	return 0;
+}

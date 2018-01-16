@@ -1,0 +1,74 @@
+Laboratorio Tematico III
+
+-Instalación linux a nivel servidor
+-Directorio cambio de directorio
+-Permisos de archivos
+-Como instalar apache
+-Como instlar tomcat
+-Editor para modificar archivos (pine)
+-Arrancar y parar apache posgre y mysql
+-Como ejecuto un archivo
+
+ls	listas del contenido de un directorio	dir
+cd	cambio de directorio	cd
+cd ..	directorio principal	cd..
+mkdir	crea un nuevo directorio	md
+rmdir	elimina un directorio	deltree
+cp	copia de un archivo	copy, xcopy
+mv	mueve un archivo	move
+rm	elimina un archivo	del
+passwd	cambia la contraseña del usuario	 
+cat	muestra el contenido del archivo	type
+more	muestra el contenido del archivo con pausas	type |more
+man
+apropos
+
+ayuda para el comando requerido	help
+lpr	imprime el archivo requerido	print
+chmod	cambia el atributo de un archivo
+chmod XXX file
+
+XXX= Usuario|Grupo|Otro en el que X representa un número entero 1<X<7
+
+
+Lectura=4, Escritura=2, Ejecución=1 
+X=Leer+Escribir+Ejecutar 
+0 significa ningún derecho 
+1 significa derecho de ejecución 
+2 significa derecho de escritura 
+3 significa derechos de escritura y ejecución
+4 significa derecho de lectura 
+5 significa derechos de lectura y de ejecución 
+6 significa derechos de lectura y de escritura
+7 significa todos los derechos	 
+chfn	cambia la información personal vista tipográficamente	 
+chsh	cambia la shell: chsh user ubicación_de_la_shell	 
+finger	lista de usuarios conectados	 
+traceroute	traza la ruta entre el equipo local y el equipo visualizado	 
+ftp [machine] [port]
+get
+
+put
+
+quit
+
+transfiere el archivo entre el equipo local y el equipo de destino
+recupera un archivo (get)
+
+envía un archivo(put)
+
+sale de la sesión FTP (quit)
+
+ 
+telnet [machine]	realiza una aplicación telnet	 
+talk	permite hablar con un usuario conectado
+talk user
+
+ 
+mesg	autoriza o rechaza el comando talk
+mesg n : Impide la recepción de mensajes talk
+
+mesg y : Permite recibir mensajes talk
+
+ 
+logout	desconexión	

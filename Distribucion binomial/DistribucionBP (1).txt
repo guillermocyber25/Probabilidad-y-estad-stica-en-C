@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define e 2.7183
+
+double b(long k, long n, double p){
+    if ( k == 0) return pow(1.0-p,n);
+    return ( (double)(n - k + 1) / k * p / (1.0 - p) ) * b(k-1, n, p);
+}
+double p(long i, double y){
+    if ( i == 0)return pow(e,-y);
+    return ( (  y  / i ) * p( i - 1 ,y ) );
+}
+void tableBinomial(long n){
+    long i = 0, col = 0;
+    double binomial[14]={0};
+    double array[14]={.01,.05,.10,.20,.25,.30,.40,.50,.60,.70,.75,.80,.90,.95};
+    printf(" ");
+    printf("p  | ");
+    for(i = 0; i != 14; i++){ 
+       printf("%.3f ", array[i]);
+    }
+    printf("\n------------------------------------------------------------------------------------------");
+    printf("\n");
+    while (col != n+1){
+        printf(" ");
+        if (col<10)
+            printf("%lu  | ",col );
+        else    
+            printf("%lu | ",col );
+        for(i = 0; i != 14; i++){ 
+            binomial[i] +=  b(col,n,array[i]); 
+            printf("%.3f ",binomial[i]); 
+        }
+        col++;
+        printf("\n");
+    }
+}
+void tablePoisson(double pro){
+    long i,j; 
+    double count,countArray[10],num;
+    num = pro; count = 0; i = 0; j = 0;
+    printf(" ");
+    printf("x | ");
+    for (i = 0; i != 10; i++){ 
+       printf("%.4f ", num);
+       num  = num + .1;
+    }
+    printf("\n---------------------------------------------------------------------------");
+    printf("\n");
+    while (countArray[9] <= .9999){
+        printf(" ");
+        printf("%lu | ",j );
+        num = pro;
+        for (i = 0; i != 10; i++){
+            countArray[i] += p(j,num);
+            printf("%.4f ", countArray[i]);        
+            num = num + .10;
+         }
+        j++;
+        printf("\n");
+    }   
+}
